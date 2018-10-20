@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C45085ED217AEFDB00D97D4B /* PhotoGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45085EC217AEFDB00D97D4B /* PhotoGrid.swift */; };
 		CE5B09A52173041A00F7F250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B09A42173041A00F7F250 /* AppDelegate.swift */; };
 		CE5B09AA2173041A00F7F250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5B09A82173041A00F7F250 /* Main.storyboard */; };
 		CE5B09AC2173041A00F7F250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5B09AB2173041A00F7F250 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C45085EC217AEFDB00D97D4B /* PhotoGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGrid.swift; sourceTree = "<group>"; };
 		CE5B09A12173041A00F7F250 /* LiveTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5B09A42173041A00F7F250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5B09A92173041A00F7F250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				CE5B09AD2173041A00F7F250 /* LaunchScreen.storyboard */,
 				CE5B09B02173041A00F7F250 /* Info.plist */,
 				CE6CD96F2178DF36005D83C0 /* MainVC.swift */,
+				C45085EC217AEFDB00D97D4B /* PhotoGrid.swift */,
 			);
 			path = LiveTool;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				CE5B09A52173041A00F7F250 /* AppDelegate.swift in Sources */,
 				CE6CD9712178DF36005D83C0 /* MainVC.swift in Sources */,
+				C45085ED217AEFDB00D97D4B /* PhotoGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

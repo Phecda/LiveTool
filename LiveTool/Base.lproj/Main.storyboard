@@ -18,19 +18,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kB4-Xx-IJT">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="89" height="85"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AnK-Mq-B7H">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoGridId" id="AnK-Mq-B7H" customClass="PhotoGrid" customModule="LiveTool" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="89" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="89" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6mD-dd-dvc">
+                                            <rect key="frame" x="0.0" y="0.0" width="89" height="85"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hK5-pl-JLJ">
+                                            <rect key="frame" x="58" y="54" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="fBT-vG-4ZN"/>
+                                                <constraint firstAttribute="width" constant="25" id="tY8-An-gM1"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="6mD-dd-dvc" firstAttribute="top" secondItem="AnK-Mq-B7H" secondAttribute="top" id="72H-JL-7ae" userLabel="Image View.top = top"/>
+                                    <constraint firstAttribute="trailing" secondItem="hK5-pl-JLJ" secondAttribute="trailing" constant="6" id="CwK-LY-q2t"/>
+                                    <constraint firstItem="6mD-dd-dvc" firstAttribute="leading" secondItem="AnK-Mq-B7H" secondAttribute="leading" id="bzP-Fd-4hg" userLabel="Image View.leading = leading"/>
+                                    <constraint firstAttribute="bottom" secondItem="6mD-dd-dvc" secondAttribute="bottom" id="dOM-ri-DXA" userLabel="bottom = Image View.bottom "/>
+                                    <constraint firstAttribute="bottom" secondItem="hK5-pl-JLJ" secondAttribute="bottom" constant="6" id="fxh-gh-j4i"/>
+                                    <constraint firstAttribute="trailing" secondItem="6mD-dd-dvc" secondAttribute="trailing" id="vFw-gO-cfe" userLabel="trailing = Image View.trailing"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="photoView" destination="6mD-dd-dvc" id="Kq0-pi-DWp"/>
+                                    <outlet property="selectionIndicator" destination="hK5-pl-JLJ" id="NN3-lC-NDz"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -42,7 +66,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKm-Jd-kTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="107"/>
+            <point key="canvasLocation" x="856.79999999999995" y="106.59670164917542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dL6-lb-bYB">

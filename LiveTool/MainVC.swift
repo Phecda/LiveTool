@@ -7,10 +7,14 @@
 //
 
 import UIKit
-
-private let reuseIdentifier = "Cell"
+import Photos
 
 class MainVC: UICollectionViewController {
+    
+    var fetchResult: PHFetchResult<PHAsset>!
+    
+    
+    fileprivate let imageManager = PHCachingImageManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +23,15 @@ class MainVC: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: PhotoGrid.reuseIdentifier)
 
         // Do any additional setup after loading the view.
+        
+        PHPhotoLibrary.shared().register(self)
+    }
+    
+    deinit {
+        PHPhotoLibrary.shared().unregisterChangeObserver(self)
     }
 
     /*
@@ -48,7 +58,7 @@ class MainVC: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoGrid.reuseIdentifier, for: indexPath)
     
         // Configure the cell
     
@@ -91,5 +101,14 @@ class MainVC: UICollectionViewController {
     func fetchLivePhotos() {
         <#function body#>
     }
+    
+}
+
+// MARK: PHPhotoLibraryChangeObserver
+extension MainVC: PHPhotoLibraryChangeObserver {
+    func photoLibraryDidChange(_ changeInstance: PHChange) {
+        <#code#>
+    }
+    
     
 }
