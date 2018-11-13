@@ -10,9 +10,22 @@ import UIKit
 
 class PhotoGrid: UICollectionViewCell {
     
-    static public let reuseIdentifier = "photoGridId"
+    static public let reuseIdentifier = "PhotoGridCell"
     
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var selectionIndicator: UIImageView!
     
+    var representedAssetIdentifier: String!
+    
+    
+    var thumbnailImage: UIImage! {
+        didSet {
+            photoView.image = thumbnailImage
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        photoView.image = nil
+    }
 }
