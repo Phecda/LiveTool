@@ -19,7 +19,6 @@ private extension UICollectionView {
 class MainVC: UICollectionViewController {
     
     var fetchResult: PHFetchResult<PHAsset>!
-    var availableWidth: CGFloat = 0
     
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
@@ -30,10 +29,6 @@ class MainVC: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Do any additional setup after loading the view.
         resetCachedAssets()
         
         PHPhotoLibrary.shared().register(self)
@@ -46,16 +41,12 @@ class MainVC: UICollectionViewController {
         }
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        let width = view.bounds.inset(by: view.safeAreaInsets).width
-        // Adjust the item size if the available width has changed.
-        if availableWidth != width {
-            availableWidth = width
-            let columnCount = (availableWidth / 80).rounded(.towardZero)
-            let itemLength = (availableWidth - columnCount - 1) / columnCount
-            collectionViewFlowLayout.itemSize = CGSize(width: itemLength, height: itemLength)
-        }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        coordinator.animate(alongsideTransition: { (context) in
+            
+            self.collectionViewFlowLayout.itemSize = self.calculateCellSize(size: size)
+            
+        }, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +54,7 @@ class MainVC: UICollectionViewController {
         
         // Determine the size of the thumbnails to request from the PHCachingImageManager.
         let scale = UIScreen.main.scale
+        collectionViewFlowLayout.itemSize = calculateCellSize(size: view!.bounds.size)
         let cellSize = collectionViewFlowLayout.itemSize
         thumbnailSize = CGSize(width: cellSize.width * scale, height: cellSize.height * scale)
     }
@@ -106,10 +98,20 @@ class MainVC: UICollectionViewController {
                 cell.thumbnailImage = image
             }
         }
-        // Configure the cell
     
         return cell
     }
+    
+    fileprivate func calculateCellSize(size: CGSize) -> CGSize {
+        let insets = view.safeAreaInsets
+        let width = size.width - insets.left - insets.right
+        
+        let columnCount = (width / 80).rounded(.towardZero)
+        let itemLength = (width - columnCount - 1)/columnCount
+        return CGSize(width: itemLength, height: itemLength)
+        
+    }
+    
     
     // MARK: Asset Caching
     
