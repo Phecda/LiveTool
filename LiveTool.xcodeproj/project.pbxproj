@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C45085ED217AEFDB00D97D4B /* PhotoGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45085EC217AEFDB00D97D4B /* PhotoGrid.swift */; };
+		C9A198A61CC477F325383C26 /* Pods_LiveTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFEE4828CF956CBE0E00D0E /* Pods_LiveTool.framework */; };
 		CE5B09A52173041A00F7F250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B09A42173041A00F7F250 /* AppDelegate.swift */; };
 		CE5B09AA2173041A00F7F250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5B09A82173041A00F7F250 /* Main.storyboard */; };
 		CE5B09AC2173041A00F7F250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5B09AB2173041A00F7F250 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55932AD2FBC774BC9A22C3CC /* Pods-LiveTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveTool/Pods-LiveTool.debug.xcconfig"; sourceTree = "<group>"; };
 		C45085EC217AEFDB00D97D4B /* PhotoGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGrid.swift; sourceTree = "<group>"; };
 		CE5B09A12173041A00F7F250 /* LiveTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5B09A42173041A00F7F250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		CE5B09B02173041A00F7F250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6CD96F2178DF36005D83C0 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		CE6CD9742178EF50005D83C0 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		DBFEE4828CF956CBE0E00D0E /* Pods_LiveTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4A0BD335C1EFC4E08EC5BC /* Pods-LiveTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveTool/Pods-LiveTool.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6CD9752178EF50005D83C0 /* Photos.framework in Frameworks */,
+				C9A198A61CC477F325383C26 /* Pods_LiveTool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,7 @@
 				CE5B09A32173041A00F7F250 /* LiveTool */,
 				CE5B09A22173041A00F7F250 /* Products */,
 				CE6CD9732178EF50005D83C0 /* Frameworks */,
+				DE774307545E79F2FD43E6AF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,8 +81,18 @@
 			isa = PBXGroup;
 			children = (
 				CE6CD9742178EF50005D83C0 /* Photos.framework */,
+				DBFEE4828CF956CBE0E00D0E /* Pods_LiveTool.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE774307545E79F2FD43E6AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55932AD2FBC774BC9A22C3CC /* Pods-LiveTool.debug.xcconfig */,
+				FB4A0BD335C1EFC4E08EC5BC /* Pods-LiveTool.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE5B09B32173041A00F7F250 /* Build configuration list for PBXNativeTarget "LiveTool" */;
 			buildPhases = (
+				88B73620AC58766F0F998C53 /* [CP] Check Pods Manifest.lock */,
 				CE5B099D2173041A00F7F250 /* Sources */,
 				CE5B099E2173041A00F7F250 /* Frameworks */,
 				CE5B099F2173041A00F7F250 /* Resources */,
+				89160EE7D285F1DC893E720F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +163,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88B73620AC58766F0F998C53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LiveTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89160EE7D285F1DC893E720F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LiveTool/Pods-LiveTool-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
+				"${BUILT_PRODUCTS_DIR}/Imaginary/Imaginary.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Imaginary.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveTool/Pods-LiveTool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE5B099D2173041A00F7F250 /* Sources */ = {
@@ -295,6 +362,7 @@
 		};
 		CE5B09B42173041A00F7F250 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55932AD2FBC774BC9A22C3CC /* Pods-LiveTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -313,6 +381,7 @@
 		};
 		CE5B09B52173041A00F7F250 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB4A0BD335C1EFC4E08EC5BC /* Pods-LiveTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
