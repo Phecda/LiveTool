@@ -16,9 +16,10 @@ private extension UICollectionView {
     }
 }
 
-class MainVC: UICollectionViewController {
+class AssetGridViewController: UICollectionViewController {
     
     var fetchResult: PHFetchResult<PHAsset>!
+    var assetCollection: PHAssetCollection!
     
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
@@ -33,11 +34,14 @@ class MainVC: UICollectionViewController {
         
         PHPhotoLibrary.shared().register(self)
         
+        if title == nil {
+            title = NSLocalizedString("All Photos", comment: "")
+        }
+        
         if (fetchResult == nil) {
-            let smartAlbums = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumLivePhotos, options: nil)
-            let collection = smartAlbums.object(at: 0)
-            fetchResult = PHAsset.fetchAssets(in: collection, options: nil)
-            
+            let allPhotosOptions = PHFetchOptions()
+            allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
+            fetchResult = PHAsset.fetchAssets(with: allPhotosOptions)
         }
     }
     
@@ -210,7 +214,7 @@ class MainVC: UICollectionViewController {
 }
 
 // MARK: PHPhotoLibraryChangeObserver
-extension MainVC: PHPhotoLibraryChangeObserver {
+extension AssetGridViewController: PHPhotoLibraryChangeObserver {
     func photoLibraryDidChange(_ changeInstance: PHChange) {
         
         guard let changes = changeInstance.changeDetails(for: fetchResult)

@@ -7,6 +7,7 @@ target 'LiveTool' do
 
   # Pods for LiveTool
 
+  pod 'Alamofire', '~> 5.0.0.beta.1'
   pod 'Imaginary'
 
 end

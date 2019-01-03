@@ -8,25 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		C45085ED217AEFDB00D97D4B /* PhotoGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45085EC217AEFDB00D97D4B /* PhotoGrid.swift */; };
+		C4D24EA621DDF61D00C632D2 /* AssetTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D24EA521DDF61D00C632D2 /* AssetTypeViewController.swift */; };
+		C4D24EC521DE11D600C632D2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D24EC421DE11D600C632D2 /* ImageIO.framework */; };
 		C9A198A61CC477F325383C26 /* Pods_LiveTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFEE4828CF956CBE0E00D0E /* Pods_LiveTool.framework */; };
 		CE5B09A52173041A00F7F250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B09A42173041A00F7F250 /* AppDelegate.swift */; };
 		CE5B09AA2173041A00F7F250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5B09A82173041A00F7F250 /* Main.storyboard */; };
 		CE5B09AC2173041A00F7F250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5B09AB2173041A00F7F250 /* Assets.xcassets */; };
 		CE5B09AF2173041A00F7F250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5B09AD2173041A00F7F250 /* LaunchScreen.storyboard */; };
-		CE6CD9712178DF36005D83C0 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD96F2178DF36005D83C0 /* MainVC.swift */; };
+		CE6CD9712178DF36005D83C0 /* AssetGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD96F2178DF36005D83C0 /* AssetGridViewController.swift */; };
 		CE6CD9752178EF50005D83C0 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CD9742178EF50005D83C0 /* Photos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		55932AD2FBC774BC9A22C3CC /* Pods-LiveTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveTool/Pods-LiveTool.debug.xcconfig"; sourceTree = "<group>"; };
 		C45085EC217AEFDB00D97D4B /* PhotoGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGrid.swift; sourceTree = "<group>"; };
+		C4D24EA521DDF61D00C632D2 /* AssetTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTypeViewController.swift; sourceTree = "<group>"; };
+		C4D24EC421DE11D600C632D2 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		CE5B09A12173041A00F7F250 /* LiveTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5B09A42173041A00F7F250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5B09A92173041A00F7F250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE5B09AB2173041A00F7F250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5B09AE2173041A00F7F250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE5B09B02173041A00F7F250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE6CD96F2178DF36005D83C0 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		CE6CD96F2178DF36005D83C0 /* AssetGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetGridViewController.swift; sourceTree = "<group>"; };
 		CE6CD9742178EF50005D83C0 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		DBFEE4828CF956CBE0E00D0E /* Pods_LiveTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4A0BD335C1EFC4E08EC5BC /* Pods-LiveTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveTool/Pods-LiveTool.release.xcconfig"; sourceTree = "<group>"; };
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D24EC521DE11D600C632D2 /* ImageIO.framework in Frameworks */,
 				CE6CD9752178EF50005D83C0 /* Photos.framework in Frameworks */,
 				C9A198A61CC477F325383C26 /* Pods_LiveTool.framework in Frameworks */,
 			);
@@ -71,8 +76,9 @@
 				CE5B09AB2173041A00F7F250 /* Assets.xcassets */,
 				CE5B09AD2173041A00F7F250 /* LaunchScreen.storyboard */,
 				CE5B09B02173041A00F7F250 /* Info.plist */,
-				CE6CD96F2178DF36005D83C0 /* MainVC.swift */,
+				CE6CD96F2178DF36005D83C0 /* AssetGridViewController.swift */,
 				C45085EC217AEFDB00D97D4B /* PhotoGrid.swift */,
+				C4D24EA521DDF61D00C632D2 /* AssetTypeViewController.swift */,
 			);
 			path = LiveTool;
 			sourceTree = "<group>";
@@ -80,6 +86,7 @@
 		CE6CD9732178EF50005D83C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4D24EC421DE11D600C632D2 /* ImageIO.framework */,
 				CE6CD9742178EF50005D83C0 /* Photos.framework */,
 				DBFEE4828CF956CBE0E00D0E /* Pods_LiveTool.framework */,
 			);
@@ -196,6 +203,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LiveTool/Pods-LiveTool-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
 				"${BUILT_PRODUCTS_DIR}/Imaginary/Imaginary.framework",
 			);
@@ -203,6 +211,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Imaginary.framework",
 			);
@@ -219,7 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5B09A52173041A00F7F250 /* AppDelegate.swift in Sources */,
-				CE6CD9712178DF36005D83C0 /* MainVC.swift in Sources */,
+				C4D24EA621DDF61D00C632D2 /* AssetTypeViewController.swift in Sources */,
+				CE6CD9712178DF36005D83C0 /* AssetGridViewController.swift in Sources */,
 				C45085ED217AEFDB00D97D4B /* PhotoGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

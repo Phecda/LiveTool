@@ -1,20 +1,24 @@
 PODS:
+  - Alamofire (5.0.0.beta.1)
   - Cache (4.2.0)
   - Imaginary (3.0.3):
     - Cache (~> 4.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0.beta.1)
   - Imaginary
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Cache
     - Imaginary
 
 SPEC CHECKSUMS:
+  Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
   Cache: f28f8dd64b632155aabf9b3906b036a659048251
   Imaginary: 9b45836a5af881f452a86e0a1215772ae4712d00
 
-PODFILE CHECKSUM: ec25f635e66bd5ed21d7e5b56ab27978409cbcdb
+PODFILE CHECKSUM: 54b4205cba1c2d3a774978019c8ab0ba1bbc1298
 
 COCOAPODS: 1.5.3
